@@ -1,0 +1,16 @@
+#======================ACCOUNTS=====================
+#api call for adding user
+###
+POST http://127.0.0.1:8000/accounts/register/
+Content-Type: application/json
+
+{
+    "username":"User1",
+    "email":"user1@gmail.com",
+    "password":"user@123",
+    "phone":"4567890",
+    "weight":"50KG",
+    "height":"180CM",
+    "age":"18",
+    "dob":"2008-08-08"
+}

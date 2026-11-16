@@ -19,9 +19,17 @@ from django.urls import path
 
 from accounts.views import SignUpView
 
+from foodlog.views import FoodLogListCreateView
+from foodlog.views import FoodLogRetrieveUpdateDeleteView
+#from foodlog.views import FoodLogSummaryView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('accounts/register/',SignUpView.as_view()),
+
+    path('foodlog/',FoodLogListCreateView.as_view()),
+    path('foodlog/<int:pk>/',FoodLogRetrieveUpdateDeleteView.as_view()),
+    #path('foodlog/summary/',FoodLogSummaryView.as_view()),
 
 ]

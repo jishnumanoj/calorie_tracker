@@ -5,12 +5,59 @@ POST http://127.0.0.1:8000/accounts/register/
 Content-Type: application/json
 
 {
-    "username":"User1",
+    "username":"user1",
     "email":"user1@gmail.com",
     "password":"user@123",
-    "phone":"4567890",
+    "phone":"45678901",
     "weight":"50KG",
     "height":"180CM",
     "age":"18",
     "dob":"2008-08-08"
 }
+
+
+
+#======================FoodLog====================
+#api call for listing all foodlog
+###
+GET http://127.0.0.1:8000/foodlog/
+Accept: application/json
+Authorization: Basic user1:user@123
+
+#api call for listing all foodlog
+###
+POST  http://127.0.0.1:8000/foodlog/
+Content-Type: application/json
+Authorization: Basic user1:user@123
+
+{
+    "title":"Idli",
+    "meal_type":"breakfast",
+    "quantity":"2",
+    "calorie":200
+}
+
+#api call for retrieveing a foodlog
+###
+GET http://127.0.0.1:8000/foodlog/1/
+Accept: application/json
+Authorization: Basic user1:user@123
+
+#api call for updating foodlog
+###
+PUT http://127.0.0.1:8000/foodlog/1/
+Content-Type: application/json
+Authorization: Basic user1:user@123
+
+{
+     "title":"Idli",
+    "meal_type":"dinner",
+    "quantity":"3",
+    "calorie":300
+}
+
+#api call for deleting foodlog
+###
+DELETE http://127.0.0.1:8000/foodlog/1/
+Accept: application/json
+
